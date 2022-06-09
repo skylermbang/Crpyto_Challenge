@@ -40,27 +40,4 @@ export default function App() {
     </QueryClientProvider>
   );
 }
-// function App() {
-//   return (
 
-//     <React.Fragment>
-
-//       <WatchListProvider>
-//         <Router>
-//           <NavigationBar />
-//           <Sidebar />
-//           <Routes>
-//             <Route path="/" element={<Home />} />
-//             <Route path="/about" element={<About />} />
-//             <Route path="/cryptos" element={<Crypto />} />
-//             <Route path="/trends/:page" element={<Trend />} />
-//             <Route path="/cryptos/:id" element={<Detail />} />
-//           </Routes>
-//         </Router>
-//       </WatchListProvider>
-//     </React.Fragment>
-
-//   );
-// }
-
-// export App;
