@@ -3,7 +3,7 @@ import React from 'react'
 // HELPER
 import styled from 'styled-components';
 //BOOTSTRAP
-import { Pagination, Container, Row, Col, DropdownButton, Dropdown, ButtonGroup } from 'react-bootstrap'
+import { Pagination, Container, Row, Col, DropdownButton, Dropdown, ButtonGroup, Image } from 'react-bootstrap'
 
 //COMPONENTS
 import GetResult from '../GetResult'
@@ -20,12 +20,9 @@ const Home2 = () => {
         setPage(page + 1)
     }
 
-
-
     const previousPage = () => {
-
         if (page != 1) { setPage(page - 1) } else if (page === 1) {
-            console.log("this is first page")
+            // console.log("this is first page")
         }
 
     }
@@ -37,64 +34,6 @@ const Home2 = () => {
     }
 
 
-    // function GetResult() {
-    //     const { isLoading, error, data } = useQuery(['repoData', page, pageSize], () =>
-    //         fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=${pageSize}&page=${page}&sparkline=false&price_change_percentage=24h%2C%207d%2C%2014d%2C%2030d
-    //         `).then(res =>
-    //             res.json()
-    //         )
-    //     )
-    //     if (isLoading) return 'Loading...'
-    //     if (error) return 'An error has occurred: ' + error.message
-    //     console.log(data)
-
-    //     return (
-
-
-    //         <div>
-    //             <Container>
-    //                 <Row >
-    //                     {data.map((coin) =>
-    //                         <Col key={coin.id} xs={6} md={4}>
-    //                             <Card style={{ width: '14rem' }}>
-    //                                 <Card.Img variant="top" src={coin.image} style={{ height: "130px", maxWidth: "130px", margin: "auto" }} />
-    //                                 <Card.Body>
-    //                                     <Card.Title>{coin.name}</Card.Title>
-    //                                     <Card.Text>
-    //                                         Symbol : {coin.symbol}
-    //                                     </Card.Text>
-    //                                     <Card.Text>
-    //                                         Price : $ {coin.current_price}
-    //                                     </Card.Text>
-    //                                     <Card.Text>
-    //                                         Market Cap Rank : # {coin.market_cap_rank}
-    //                                     </Card.Text>
-
-    //                                     <Button variant="light"  >  <Link to={`/cryptos/${coin.id}`}>Detail Page</Link></Button>
-
-    //                                 </Card.Body>
-    //                             </Card>
-    //                         </Col>
-
-
-    //                     )}
-    //                 </Row>
-    //             </Container>
-    //         </div >
-    //     )
-
-
-
-    // }
-
-
-
-    React.useEffect(() => {
-
-        console.log(page)
-
-    }, [page])
-
     return (
         <div>
 
@@ -103,6 +42,8 @@ const Home2 = () => {
                 <div>
                     <h1>  Crypto Analyzer</h1>
                 </div>
+
+                <Image src="https://images.unsplash.com/photo-1616635481720-7fd37f8cfc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" style={{ height: "500px", marginLeft: "200px" }} />
 
                 <p>Welcom to Crypto Analyzer </p>
                 <p>You can check out new crypto news, information ,historical chart from this website</p>

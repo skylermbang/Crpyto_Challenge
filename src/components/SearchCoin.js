@@ -220,7 +220,7 @@ const SearchWrapper = styled.div`
   margin-bottom: 150px;
   width: 30vw;
   height: 10vh;
-  background-color:#fcfafa;
+  background-color:#ffffff
 
 .dashboard{
     display:flex;

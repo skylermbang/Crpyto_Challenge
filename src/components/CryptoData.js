@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, ListGroup } from 'react-bootstrap';
 import API from "./CryptoApi"
-const axios = require('axios');
+import axios from 'axios'
 
 function CryptoData({ coin }) {
     console.log(coin, "what is the coin")

@@ -4,14 +4,7 @@ import CryptoList from './CryptoList'
 import './Crypto.css'
 import Card from 'react-bootstrap/Card'
 import styled from 'styled-components'
-const GridWrapper = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  margin-top: 1em;
-  margin-left: 10em;
-  margin-right: 10em;
 
-`;
 
 function Crypto() {
   return (
@@ -59,4 +52,12 @@ function Crypto() {
   )
 }
 
+const GridWrapper = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 1em;
+  margin-left: 10em;
+  margin-right: 10em;
+
+`;
 export default Crypto

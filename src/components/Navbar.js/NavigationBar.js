@@ -6,12 +6,12 @@ const Styles = styled.div`
 
   a, .navbar-nav, .navbar-light .nav-link {
     color: #FFFFFF;
-    &:hover { color: #9FFFCB; }
+    &:hover { color: #c61b6b; }
   }
   .navbar-brand {
     font-size: 1.4em;
     color: #FFFFFF;
-    &:hover { color: #9FFFCB; }
+    &:hover { color: #c61b6b; }
   }
   .form-center {
     position: absolute !important;

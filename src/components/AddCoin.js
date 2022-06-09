@@ -1,7 +1,7 @@
 import React from 'react'
 import API from "./CryptoApi"
 import { Form, Button } from 'react-bootstrap';
-import { WatchListContext } from './watchList'
+import { WatchListContext } from './WatchList'
 
 function AddCoin() {
     const { addCoin } = React.useContext(WatchListContext)

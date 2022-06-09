@@ -1,6 +1,6 @@
 import React from 'react'
 import API from "./CryptoApi"
-import { WatchListContext } from './watchList'
+import { WatchListContext } from './WatchList'
 import { Link } from "react-router-dom"
 
 import { Table, Button } from 'react-bootstrap'
@@ -33,42 +33,7 @@ const CryptoList = () => {
 
 
             <h1> Watch List </h1>
-            {/* <ul>
-                <li className='coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-left text-dark'>
 
-                    <span className="text-decoration-none"> <strong>Symbol</strong></span>
-                    <span className="text-decoration-none"> <strong>Name</strong> </span>
-                    <span className="text-decoration-none"> <strong>Price</strong> </span>
-                    <span className="text-decoration-none"> <strong>Price in 24hrs</strong> </span>
-                    <span className="text-decoration-none"> <strong> % </strong> </span>
-                </li> */}
-
-
-
-            {/* {coin.map((coin) =>
-
-                        <Link key={coin.id} to={`/cryptos/${coin.id}`} className="text-decoration-none my-1 coin">
-                            <li className="coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-center text-dark">
-                                <img className="coinlist-image" src={coin.image} alt="" />
-
-                                <span className="text-decoration-none"> {coin.name} </span>
-                                <span className="text-decoration-none"> {coin.current_price.toFixed(3)} $AUD </span>
-                                <span className={coin.price_change_percentage_24h < 0 ? "text-danger mr-2-none" : "text-success mr-2-none"}>
-                                    {coin.price_change_percentage_24h < 0 ? <i className='fas fa-sort-down align-middle mr-1'></i> : <i className='fas fa-sort-up align-middle mr-1'></i>}
-                                    {coin.price_change_24h.toFixed(3)} $AUD</span>
-
-                                <span className={coin.price_change_24h < 0 ? "text-danger mr-2-none" : "text-success mr-2-none"}>
-
-                                    {coin.price_change_percentage_24h < 0 ? <i className='fas fa-sort-down align-middle mr-1'></i> : <i className='fas fa-sort-up align-middle mr-1'></i>}
-                                    {coin.price_change_percentage_24h.toFixed(3)} %</span>
-
-                                <i className="delete-icon far fa-times-circle text-danger" onClick={(e) => {
-                                    e.preventDefault()
-                                    deleteCoin(coin.id)
-                                }}></i>
-                            </li>
-                        </Link>
-                    )} */}
 
             <Table striped bordered hover >
                 <thead>

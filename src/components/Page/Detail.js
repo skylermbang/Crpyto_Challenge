@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { useParams, } from 'react-router-dom';
 
 
-import CryptoData from './CryptoData'
-import API from "./CryptoApi"
-import CryptoChart from "./Chart2"
+import CryptoData from '../CryptoData'
+import API from "../CryptoApi"
+import CryptoChart from "../Chart2"
 
 const GridWrapper = styled.div`
   display: grid;
