@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from 'react-bootstrap/Card'
+
 import { useQuery } from "react-query";
 import classnames from 'classnames';
-import { Table } from 'react-bootstrap'
-
+import { Container, Row, Col, Card, Table } from 'react-bootstrap'
 
 function Trends() {
     const [page, setPage] = React.useState(1);
@@ -50,7 +49,7 @@ function Trends() {
 
         console.log(page)
     }, [page])
-    // const { data, isLoading, error } = useQuery(['trends', page], () => axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=20&page=${page}&sparkline=false&price_change_percentage=24h`));
+
     function GetTrend() {
         const { isLoading, error, data } = useQuery(['repoData', page], () =>
             fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=20&page=${page}&sparkline=false&price_change_percentage=24h`).then(res =>
@@ -93,48 +92,64 @@ function Trends() {
                     </Table>
                 </div>
                 current page: {page}
-                <Pagination>
-                    <ul
-                        className='pagination-container'
-                    >
-                        <li
-                            className={classnames('pagination-item', {
-                                disabled: page === 1
-                            })}
-                            onClick={previousPage}
-                        >
-                            <div className="arrow left" />
-                        </li>
-                        <li
-                            className={classnames('pagination-item', {
-                                disabled: page === 1
-                            })}
-                            onClick={previousPage}
-                        >      {page - 1}
-                        </li>
-                        <li
-                            className='pagination-item'
-                        // onClick=
-                        >      {page}
-                        </li>
-                        <li
-                            className={classnames('pagination-item', {
-                                disabled: page === 5
-                            })}
-                            onClick={nextPage}
-                        >      {page + 1}
-                        </li>
 
-                        <li
-                            className={classnames('pagination-item', {
-                                disabled: page === lastPage
-                            })}
-                            onClick={nextPage}
-                        >
-                            <div className="arrow right" />
-                        </li>
-                    </ul>
-                </Pagination>
+                <Container>
+                    <Row>
+                        <Col xs={6} md={4}>
+
+
+                        </Col>
+                        <Col xs={6} md={4}>
+                            <Pagination>
+                                <ul
+                                    className='pagination-container'
+                                >
+                                    <li
+                                        className={classnames('pagination-item', {
+                                            disabled: page === 1
+                                        })}
+                                        onClick={previousPage}
+                                    >
+                                        <div className="arrow left" />
+                                    </li>
+                                    <li
+                                        className={classnames('pagination-item', {
+                                            disabled: page === 1
+                                        })}
+                                        onClick={previousPage}
+                                    >      {page - 1}
+                                    </li>
+                                    <li
+                                        className='pagination-item'
+                                    // onClick=
+                                    >      {page}
+                                    </li>
+                                    <li
+                                        className={classnames('pagination-item', {
+                                            disabled: page === 5
+                                        })}
+                                        onClick={nextPage}
+                                    >      {page + 1}
+                                    </li>
+
+                                    <li
+                                        className={classnames('pagination-item', {
+                                            disabled: page === lastPage
+                                        })}
+                                        onClick={nextPage}
+                                    >
+                                        <div className="arrow right" />
+                                    </li>
+                                </ul>
+                            </Pagination>
+                        </Col>
+                        <Col xs={6} md={4}>
+
+
+                        </Col>
+                    </Row>
+                </Container>
+
             </div >
 
         )
@@ -190,7 +205,7 @@ const GridWrapper = styled.div`
 const Pagination = styled.div`
 .pagination-container {
     display: flex;
-    padding-left: 420px;
+
     text-align:center
     list-style-type: none;
   

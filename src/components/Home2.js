@@ -32,6 +32,11 @@ const Home2 = () => {
 
     }
 
+
+    React.useEffect(() => {
+
+        console.log(page)
+    }, [page])
     function GetResult() {
         const { isLoading, error, data } = useQuery(['repoData', page, pageSize], () =>
             fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=${pageSize}&page=${page}&sparkline=false&price_change_percentage=24h%2C%207d%2C%2014d%2C%2030d
