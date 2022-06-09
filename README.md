@@ -2,6 +2,7 @@
 ## Crypto Analyzer
 
 You can access the website : http://coding-challenge-skyler.s3-website-ap-southeast-2.amazonaws.com/
+User guid video : https://youtu.be/owpV-vNYeHY
 
 
 
@@ -94,10 +95,17 @@ npm start
 
 
 ## Challengs
+
+- Deployment Issues
+   using vercel and heroku having dependency issues 
+   Had to use s3 to deploy the react app
 - CORS problem 
     In local development server , it is possible to get news articles using NEWSAPI 
      hoever in S3, there is CORS error ... It wont get the data from api
+    Tried few different news api (bingle, newsapi) both not working due to CORS , showing error state instead, 
+    will keep look for other methods(proxy, other API...)
 
 - Unit Test
     Not familiar with components unit testing.
+    Trying to learn more about it 
     
