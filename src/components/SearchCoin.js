@@ -1,17 +1,15 @@
+//REACT
 import React from 'react'
-import API from "./CryptoApi"
-import { Button, Container, Row, Col, } from 'react-bootstrap';
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
-import styled from 'styled-components'
 import { Link } from "react-router-dom"
-
-// import { useQuery } from "react-query";
+// HELPER
+import styled from 'styled-components'
+import API from "./CryptoApi"
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+//BOOTSTRAP
+import { Button, Container, Row, Col, } from 'react-bootstrap';
 
 
 function SearchCoin() {
-
-    // const [search, setSearch] = React.useState("");
-
     const items = [
         {
             id: "bitcoin",
@@ -91,9 +89,6 @@ function SearchCoin() {
         console.log(coin)
         // addCoin(coin);
     }
-
-
-
 
     const ShowResult = ({ coin }) => {
         console.log(coin)

@@ -1,16 +1,16 @@
 //REACT
 import React from 'react'
-
-
+//BOOTSTRAP
+import { Container, Row, Col, Table } from 'react-bootstrap'
+// HELPER
+import classnames from 'classnames';
 import styled from 'styled-components'
 import { useQuery } from "react-query";
-import classnames from 'classnames';
-import { Container, Row, Col, Table } from 'react-bootstrap'
+
+
 
 
 function GetTrend() {
-
-
     const [page, setPage] = React.useState(1);
     const lastPage = 5;
     const nextPage = () => {

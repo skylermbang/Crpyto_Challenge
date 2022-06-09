@@ -4,7 +4,6 @@ import React from 'react'
 import styled from 'styled-components';
 //BOOTSTRAP
 import { Pagination, Container, Row, Col, DropdownButton, Dropdown, ButtonGroup, Image } from 'react-bootstrap'
-
 //COMPONENTS
 import GetResult from '../GetResult'
 import SearchCoin from '../SearchCoin'
@@ -44,11 +43,12 @@ const Home2 = () => {
                         <Col>
                             <h1>  Crypto Analyzer</h1>
 
-                            <p>Welcom to Crypto Analyzer </p>
+                            <p>Welcome to Crypto Analyzer </p>
+                            <p>You can checkout the coin info and also add into your watch list</p>
                             <p>Please use left sidebar to check out the page</p>
-                            <Image src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdgRk48%2FbtrEou2a3ob%2F579kQ4jb68QkUSqeI41KEk%2Fimg.png" style={{ borderRadius: "20px" }} />
+                            <Image src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdgRk48%2FbtrEou2a3ob%2F579kQ4jb68QkUSqeI41KEk%2Fimg.png" style={{ borderRadius: "20px", marginTop: "70px" }} />
                         </Col>
-                        <Col> <Image src="https://images.unsplash.com/photo-1616635481720-7fd37f8cfc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" style={{ width: "600px", height: "500px", borderRadius: "20px" }} /></Col>
+                        <Col> <Image src="https://images.unsplash.com/photo-1616635481720-7fd37f8cfc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" style={{ width: "600px", height: "500px", borderRadius: "20px", }} /></Col>
                     </Row>
                 </Container>
 

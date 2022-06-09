@@ -1,20 +1,11 @@
+//REACT
 import React from 'react';
+//HELPER
 import styled from 'styled-components';
+//BOOTSTRAP
 import { Button, Col, Tab, Nav, Row, Image } from 'react-bootstrap';
 
-const GridWrapper = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  margin-top: 1em;
-  margin-left: 6em;
-  margin-right: 6em;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(25px, auto);
-`;
-
 function About() {
-
-
   const About = () => {
     return (<div>
 
@@ -74,4 +65,13 @@ function About() {
   )
 }
 
+const GridWrapper = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 1em;
+  margin-left: 6em;
+  margin-right: 6em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(25px, auto);
+`;
 export default About

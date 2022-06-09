@@ -1,6 +1,10 @@
+//COMPONENTS
 import React from 'react'
-import "../App.css"
+
+// HELPER
 import { NavbarData } from './NavbarData'
+import "../App.css"
+
 
 function Navbar() {
     return (

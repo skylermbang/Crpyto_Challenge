@@ -1,7 +1,11 @@
+//REACT
 import React from 'react'
+//BOOTSTRAP
 import { Button, ListGroup } from 'react-bootstrap';
+// HELPER
 import API from "./CryptoApi"
 import axios from 'axios'
+
 
 function CryptoData({ coin }) {
     console.log(coin, "what is the coin")
@@ -9,10 +13,7 @@ function CryptoData({ coin }) {
     let [Loading, setLoading] = React.useState(false)
     let [DataLoading, setDataLoading] = React.useState(false)
     let [data, setData] = React.useState("")
-
-
     React.useEffect(() => {
-
         async function getArticle(id) {
             await axios.get(`https://newsapi.org/v2/everything?q=${id}&from=2022-05-11&sortBy=popularity&apiKey=da6b832dcd4046f8997b1ce5eba26aee`).then(resp => {
                 setArticles(resp.data.articles)
@@ -91,11 +92,7 @@ function CryptoData({ coin }) {
                 {Loading ? < ShowArticle articles={articles} /> : <div> Article Loading </div>}
             </div>
 
-
-
-
         </div >
-
     )
 }
 

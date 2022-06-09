@@ -1,11 +1,9 @@
+//REACT
 import React, { useRef, useEffect } from "react";
-
+// HELPER
 import Chartjs from "chart.js";
 
-
 const CrpytoChart = ({ data, time }) => {
-
-
     const chartRef = useRef();
     const { day, week, month, year } = data;
     console.log(time)
@@ -79,24 +77,7 @@ const CrpytoChart = ({ data, time }) => {
             </div>
 
             <div className="chart-button mt-1">
-                {/* <button
-                    onClick={() => setTimeFormat("24h")}
-                    className="btn btn-outline-secondary btn-sm"
-                >
-                    24h
-                </button>
-                <button
-                    onClick={() => setTimeFormat("7d")}
-                    className="btn btn-outline-secondary btn-sm mx-1"
-                >
-                    7d
-                </button>
-                <button
-                    onClick={() => setTimeFormat("1y")}
-                    className="btn btn-outline-secondary btn-sm"
-                >
-                    1y
-                </button> */}
+
             </div>
         </div>
     );

@@ -1,20 +1,24 @@
 
+//REACT
 import './App.css';
 import * as React from 'react'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// HELPER
+import { WatchListProvider } from './components/WatchList';
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
+//BOOTSTRAP
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+//COMPONENTS
 import Home from './components/Page/Home'
 import Crypto from './components/Crypto'
 import About from './components/Page/About'
 import Detail from './components/Page/Detail'
 import Trend from './components/Page/Trend'
 import Footer from './components/Footer/Footer'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { NavigationBar } from './components/Navbar.js/NavigationBar';
-import { QueryClient, QueryClientProvider } from "react-query";
-
 import Sidebar from './components/_Sidebar.js/Sidebar';
-import { WatchListProvider } from './components/WatchList';
-const queryClient = new QueryClient();
+import NavigationBar from './components/Navbar.js/NavigationBar';
 
 
 

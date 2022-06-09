@@ -1,20 +1,14 @@
+//REACT
 import React from 'react'
-import styled from 'styled-components';
-
 import { useParams, } from 'react-router-dom';
-
-
-import CryptoData from '../CryptoData'
+// HELPER
+import styled from 'styled-components';
 import API from "../CryptoApi"
-import CryptoChart from "../Chart2"
+import CryptoData from '../CryptoData'
 
-const GridWrapper = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  margin-top: 1em;
-  margin-left: 12em;
-  margin-right: 10em;
-`;
+//COMPONENTS
+import CryptoChart from "../Chart2"
+import Loader from '../Loader'
 
 const Detail = () => {
     const [coinPrice, setCoinPrice] = React.useState([])
@@ -65,6 +59,7 @@ const Detail = () => {
                 month: formatData(monthChart.data.prices),
                 year: formatData(yearChart.data.prices)
             })
+            setLoading(false)
         }
         fetch()
     }, [])
@@ -84,7 +79,7 @@ const Detail = () => {
                 <CryptoChart data={coinPrice} time="year" />
 
                 <CryptoData coin={id} />
-                {loading ? null : <strong>Loading...</strong>}
+                {loading ? <Loader type="spin" color="0,0,0" message={"wait please"} /> : null}
 
             </GridWrapper>
 
@@ -95,6 +90,13 @@ const Detail = () => {
 }
 
 
+const GridWrapper = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 1em;
+  margin-left: 12em;
+  margin-right: 10em;
+`;
 export default Detail
 
 

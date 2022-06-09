@@ -1,9 +1,14 @@
+//REACT
 import React from 'react'
+import { Link } from "react-router-dom"
+// HELPER
 import API from "./CryptoApi"
 import { WatchListContext } from './WatchList'
-import { Link } from "react-router-dom"
 
+//BOOTSTRAP
 import { Table, Button } from 'react-bootstrap'
+
+
 
 const CryptoList = () => {
     const [coin, setCoins] = React.useState([])
@@ -75,7 +80,7 @@ const CryptoList = () => {
             </Table>
 
 
-            {/* </ul > */}
+
 
             {loading ? null : <strong>Loading...</strong>}
         </div >

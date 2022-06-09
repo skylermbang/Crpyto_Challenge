@@ -1,15 +1,10 @@
+//REACT
 import React from 'react';
+import { Link } from "react-router-dom";
+// HELPER
 import styled from "styled-components";
 
-
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Link } from "react-router-dom";
-/* This defines the actual bar going down the screen */
-
-
 class SideNav extends React.Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -65,6 +60,38 @@ class SideNav extends React.Component {
     }
 }
 
+
+
+
+
+
+class NavItem extends React.Component {
+
+    handleClick = () => {
+        const { path, onItemClick } = this.props;
+        onItemClick(path);
+    }
+    render() {
+        const { active } = this.props;
+        return (
+            <StyledNavItem active={active}>
+                <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>
+                    <NavIcon></NavIcon>
+                </Link>
+            </StyledNavItem>
+
+        );
+    }
+}
+
+export default class Sidebar extends React.Component {
+    render() {
+        return (
+            <SideNav></SideNav>
+        );
+    }
+}
+
 const StyledSideNav = styled.div`
   position: fixed;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
   height: 100%;
@@ -97,34 +124,3 @@ const StyledNavItem = styled.div`
 `;
 const NavIcon = styled.div`
 `;
-
-
-
-
-
-class NavItem extends React.Component {
-
-    handleClick = () => {
-        const { path, onItemClick } = this.props;
-        onItemClick(path);
-    }
-    render() {
-        const { active } = this.props;
-        return (
-            <StyledNavItem active={active}>
-                <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>
-                    <NavIcon></NavIcon>
-                </Link>
-            </StyledNavItem>
-
-        );
-    }
-}
-
-export default class Sidebar extends React.Component {
-    render() {
-        return (
-            <SideNav></SideNav>
-        );
-    }
-}
