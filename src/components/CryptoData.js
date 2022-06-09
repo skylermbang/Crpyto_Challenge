@@ -13,9 +13,15 @@ function CryptoData({ coin }) {
     let [Loading, setLoading] = React.useState(false)
     let [DataLoading, setDataLoading] = React.useState(false)
     let [data, setData] = React.useState("")
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = yyyy - mm - dd
+
     React.useEffect(() => {
         async function getArticle(id) {
-            await axios.get(`https://newsapi.org/v2/everything?q=${id}&from=2022-05-11&sortBy=popularity&apiKey=da6b832dcd4046f8997b1ce5eba26aee`).then(resp => {
+            await axios.get(`https://newsapi.org/v2/everything?q=${id}&from=${today}&sortBy=popularity&apiKey=da6b832dcd4046f8997b1ce5eba26aee`).then(resp => {
                 setArticles(resp.data.articles)
                 setLoading(true)
 
