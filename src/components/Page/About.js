@@ -19,11 +19,11 @@ function About() {
     return (<div>
 
       <div>
-        <Image src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbqtcJ4%2FbtrEkpH3Fxi%2FMwcC3y33cjJI1bA6HatDl0%2Fimg.png"></Image>
+        <Image src="https://avatars.githubusercontent.com/u/32551541?v=4" style={{ height: "300px", width: "400px" }}></Image>
         <h2>Skyler Minsu Bang</h2>
         <a href="https://github.com/skylermbang">  <Button variant="success">Github</Button>{' '}</a>
-        <a href="https://www.linkedin.com/in/skyler-minsu-bang-250072148/"><Button variant="info"> LinkedIn</Button></a>
-        <a href="https://skyler-world.tistory.com/284#comment21548659"><Button variant="danger"> Personal Blog </Button></a>
+        <a href="https://www.linkedin.com/in/skyler-minsu-bang-250072148/" style={{ marginLeft: "10px" }}><Button variant="info"> LinkedIn </Button></a>
+        <a href="https://skyler-world.tistory.com/284#comment21548659" style={{ marginLeft: "12px" }}><Button variant="danger"> Personal Blog </Button></a>
 
       </div>
     </div>)
@@ -33,16 +33,7 @@ function About() {
   const Manual = () => {
     return (<div>
       <h1> User Manual Guide </h1>
-      <div>
-        <iframe
-          src="https://www.youtube.com/embed/E7wJTI-1dvQ"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          title="video"
-        />{" "}
-
-      </div>
+      <iframe width="1424" height="620" src="https://www.youtube.com/embed/owpV-vNYeHY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
       <h1> User Manual Guide </h1>
     </div>)
@@ -56,10 +47,10 @@ function About() {
           <Col sm={3}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
-                <Nav.Link eventKey="first">About Us</Nav.Link>
+                <Nav.Link eventKey="first">AboutUs</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">User Manual</Nav.Link>
+                <Nav.Link eventKey="second">Manual</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -77,12 +68,7 @@ function About() {
       </Tab.Container></GridWrapper>
 
 
-      <GridWrapper>
-        <h2>About Page</h2>
-        <h2> Crypto Analyzer </h2>
-
-
-
+      <GridWrapper style={{ marginBottom: "400px" }}>
 
       </GridWrapper ></div >
   )

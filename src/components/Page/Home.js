@@ -28,9 +28,10 @@ const Home2 = () => {
     }
 
     const lastPage = () => {
-
         setPage(100)
-
+    }
+    const firstPage = () => {
+        setPage(1)
     }
 
 
@@ -38,15 +39,19 @@ const Home2 = () => {
         <div>
 
             <GridWrapper>
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1>  Crypto Analyzer</h1>
 
-                <div>
-                    <h1>  Crypto Analyzer</h1>
-                </div>
+                            <p>Welcom to Crypto Analyzer </p>
+                            <p>Please use left sidebar to check out the page</p>
+                            <Image src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdgRk48%2FbtrEou2a3ob%2F579kQ4jb68QkUSqeI41KEk%2Fimg.png" style={{ borderRadius: "20px" }} />
+                        </Col>
+                        <Col> <Image src="https://images.unsplash.com/photo-1616635481720-7fd37f8cfc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" style={{ width: "600px", height: "500px", borderRadius: "20px" }} /></Col>
+                    </Row>
+                </Container>
 
-                <Image src="https://images.unsplash.com/photo-1616635481720-7fd37f8cfc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" style={{ height: "500px", marginLeft: "200px" }} />
-
-                <p>Welcom to Crypto Analyzer </p>
-                <p>You can check out new crypto news, information ,historical chart from this website</p>
             </GridWrapper>
             <GridWrapper>
                 <SearchCoin />
@@ -93,16 +98,16 @@ const Home2 = () => {
                         </Col>
                         <Col xs={6} md={4}>
                             <Pagination>
-                                <Pagination.First />
+                                <Pagination.First onClick={firstPage} />
                                 <Pagination.Prev onClick={previousPage} />
                                 {page === 1 ? <Pagination.Item disabled style={{ display: "none" }}>{0}</Pagination.Item> : <Pagination.Item onClick={previousPage}   >{page - 1}</Pagination.Item>}
                                 <Pagination.Item active>{page}</Pagination.Item>
-                                <Pagination.Item onClick={nextPage} >{page + 1}</Pagination.Item>
-
+                                {/* <Pagination.Item onClick={nextPage} >{page + 1}</Pagination.Item> */}
+                                {page > 99 ? <Pagination.Item disabled style={{ display: "none" }}></Pagination.Item> : <Pagination.Item onClick={nextPage} >{page + 1}</Pagination.Item>}
                                 <Pagination.Ellipsis />
-                                <Pagination.Item onClick={lastPage} >{LastPage}</Pagination.Item>
-                                <Pagination.Next onClick={nextPage} />
-                                <Pagination.Last />
+
+                                {page > 99 ? <Pagination.Item disabled style={{ display: "none" }} onClick={lastPage}></Pagination.Item> : <Pagination.Item onClick={lastPage} >{LastPage}</Pagination.Item>}
+                                <Pagination.Last onClick={lastPage} />
                             </Pagination>
                         </Col>
                         <Col xs={6} md={4}>

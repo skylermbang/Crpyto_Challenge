@@ -38,9 +38,7 @@ function SearchCoin() {
 
 
     const handleOnSearch = (string, results,) => {
-
         console.log(string, results)
-
         try {
             if (result) {
                 let coin = results[0].name
@@ -64,8 +62,8 @@ function SearchCoin() {
     const handleOnSelect = (item) => {
         // the item selected
         console.log("***")
-        console.log(item.id)
-        setCoinSearch(item.id)
+        console.log(item.name)
+        setCoinSearch(item.name)
 
     }
 
@@ -194,10 +192,11 @@ function SearchCoin() {
 
                             </header>
                         </div>
-                    </SearchWrapper></Col>
-                    <Col sm={4}>    <Button variant="primary" type="submit" onClick={handleOnSearch} >
+                    </SearchWrapper>
+                    </Col>
+                    <Col sm={4} style={{ marginTop: "100px" }}>  <Button variant="primary" type="submit" onClick={handleOnSearch} >
                         Search
-                    </Button></Col>
+                    </Button> </Col>
                 </Row>
             </Container >
 
@@ -205,7 +204,7 @@ function SearchCoin() {
 
 
 
-            {result ? <ShowResult coin={resultData} /> : <div><h1> Cant find the match of your search</h1></div>
+            {result ? <ShowResult coin={resultData} /> : null
             }
 
         </div >
@@ -214,10 +213,10 @@ function SearchCoin() {
 
 const SearchWrapper = styled.div`
 
-
+  margin-top: 100px;
   margin-left: 10em;
   margin-right: 10em;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   width: 30vw;
   height: 10vh;
   background-color:#ffffff

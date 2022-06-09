@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 
 function Footer() {
@@ -11,17 +11,17 @@ function Footer() {
                 <Row>
                     <Col> Skyler Minsu Bang
                         <a href="https://github.com/skylermbang">  <Button variant="secondary">Github</Button>{' '}</a></Col>
-                    <Col> <Badge pill bg="secondary">
-                        © 2022 Coin Analyzer. All Rights Reserved.
+                    <Col >
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            © 2022 Coin Analyzer. All Rights Reserved.
 
-                    </Badge>{' '}
-                        <Badge pill bg="success">
 
-                        </Badge>{' '}</Col>
+                        </div>
+                    </Col>
                     <Col></Col>
                 </Row>
-            </Container>
-        </div>
+            </Container >
+        </div >
     )
 }
 
