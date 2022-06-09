@@ -1,7 +1,7 @@
 
 import './App.css';
 import * as React from 'react'
-import Home from '../src/components/Home2'
+import Home from '../src/components/Page/Home2'
 import Crypto from './components/Crypto'
 import About from './components/About'
 import Detail from './components/Detail'
