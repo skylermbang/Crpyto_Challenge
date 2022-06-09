@@ -29,9 +29,45 @@ function SearchCoin() {
 
         },
         {
-            id: "lnx",
-            name: 'lunar'
-        }
+            id: "link",
+            name: 'chainlink'
+        },
+        {
+            id: "usdt",
+            name: 'tether'
+        },
+        {
+            id: "usdc",
+            name: 'usd coin'
+        },
+        {
+            id: "bnb",
+            name: 'binancecoin'
+        },
+        {
+            id: "ada",
+            name: 'cardano'
+        },
+        {
+            id: "sol",
+            name: 'solana'
+        },
+        {
+            id: "doge",
+            name: 'dogecoin'
+        },
+        {
+            id: "dot",
+            name: 'polkadot'
+        },
+        {
+            id: "trx",
+            name: 'tron'
+        },
+        {
+            id: "ltc",
+            name: 'litecoin'
+        },
     ]
 
 
